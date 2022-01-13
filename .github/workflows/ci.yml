@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pre_built_onetbb_from_github_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run example
+        run: |
+          cd pre_built_onetbb_from_github
+          ./run.sh
+
+  onetbb_from_github_with_fetch_content_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run example
+        run: |
+          cd onetbb_from_github_with_fetch_content
+          ./run.sh
