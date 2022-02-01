@@ -9,7 +9,7 @@ rm -rf build
 cmake -B build -S .
 
 # Build application along with oneTBB
-cmake --build build --verbose --parallel
+cmake --build build --target my_app --verbose --parallel
 
 # Run application
 ./build/my_app
