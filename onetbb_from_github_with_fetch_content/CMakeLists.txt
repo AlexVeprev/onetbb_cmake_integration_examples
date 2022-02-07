@@ -20,5 +20,5 @@ option(TBB_TEST OFF)
 # Make oneTBB source tree available in this project (like add_subdirectory)
 FetchContent_MakeAvailable(onetbb)
 
-# Connect imported oneTBB core target to our application
+# Connect oneTBB core target to our application (oneTBB will be built as dependency)
 target_link_libraries(my_app PRIVATE TBB::tbb)
